@@ -43,7 +43,6 @@ class Tasks:
         return list.keys()
 
     def get_tasks_group_by_process(self):
-        x=0
         for process_name in self.get_process_list():
             total_time = 0;
             for task in self.objects:
@@ -54,7 +53,6 @@ class Tasks:
 
 
     def get_process_tasks(self, process_name ):
-        x=0;
         for task in self.objects:
             if task.process_name == process_name:
                 print '\t{:s} --- {:s}'.format( task.window_name, self.int_to_time( task.spent_time ) )
